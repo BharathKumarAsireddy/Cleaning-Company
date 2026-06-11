@@ -2,25 +2,168 @@
 
 :root {
   --background: #ffffff;
-  --foreground: #171717;
+  --foreground: #16263b;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
+  --font-sans: var(--font-inter);
+  --font-display: var(--font-jakarta);
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+  /* Brand palette - deep navy + vibrant teal/cyan, premium "pro cleaning" feel */
+  --color-ink-50: #eef4f9;
+  --color-ink-100: #dbe8f1;
+  --color-ink-200: #b3cee0;
+  --color-ink-300: #82adc9;
+  --color-ink-400: #4f87ad;
+  --color-ink-500: #336a90;
+  --color-ink-600: #265272;
+  --color-ink-700: #1f4159;
+  --color-ink-800: #18324a;
+  --color-ink-900: #122438;
+  --color-ink-950: #0a1622;
+
+  --color-aqua-50: #ecfeff;
+  --color-aqua-100: #cffafe;
+  --color-aqua-200: #a5f3fc;
+  --color-aqua-300: #67e8f9;
+  --color-aqua-400: #22d3ee;
+  --color-aqua-500: #0ea5a4;
+  --color-aqua-600: #0d9488;
+  --color-aqua-700: #0f766e;
+  --color-aqua-800: #115e59;
+  --color-aqua-900: #134e4a;
+  --color-aqua-950: #042f2e;
+
+  --animate-float: float 6s ease-in-out infinite;
+  --animate-float-slow: float 9s ease-in-out infinite;
+  --animate-marquee: marquee 32s linear infinite;
+  --animate-gradient: gradient-shift 8s ease infinite;
+  --animate-fade-in: fade-in 0.7s ease forwards;
+
+  @keyframes float {
+    0%, 100% { transform: translateY(0px) rotate(0deg); }
+    50% { transform: translateY(-18px) rotate(2deg); }
+  }
+  @keyframes marquee {
+    from { transform: translateX(0); }
+    to { transform: translateX(-50%); }
+  }
+  @keyframes gradient-shift {
+    0%, 100% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+  }
+  @keyframes fade-in {
+    from { opacity: 0; transform: translateY(16px); }
+    to { opacity: 1; transform: translateY(0); }
   }
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: var(--color-background);
+  color: var(--color-foreground);
+  font-family: var(--font-sans), Arial, Helvetica, sans-serif;
+}
+
+/* Reusable utilities */
+@utility text-gradient {
+  background-image: linear-gradient(135deg, var(--color-aqua-500), var(--color-ink-600));
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+/* Subtle dark grid lines for light backgrounds */
+@utility bg-grid {
+  background-image:
+    linear-gradient(to right, rgb(17 40 63 / 0.05) 1px, transparent 1px),
+    linear-gradient(to bottom, rgb(17 40 63 / 0.05) 1px, transparent 1px);
+  background-size: 44px 44px;
+}
+
+/* Subtle light grid lines for dark backgrounds */
+@utility bg-grid-light {
+  background-image:
+    linear-gradient(to right, rgb(255 255 255 / 0.06) 1px, transparent 1px),
+    linear-gradient(to bottom, rgb(255 255 255 / 0.06) 1px, transparent 1px);
+  background-size: 44px 44px;
+}
+
+@utility glass {
+  background: rgb(255 255 255 / 0.7);
+  backdrop-filter: blur(16px);
+  border: 1px solid rgb(17 40 63 / 0.06);
+}
+
+@utility card-3d {
+  transform-style: preserve-3d;
+  perspective: 1200px;
+}
+
+/* Dark navy gradient scrim for photo-backed sections */
+@utility section-scrim {
+  background-image: linear-gradient(
+    180deg,
+    rgb(10 22 34 / 0.94) 0%,
+    rgb(10 22 34 / 0.88) 45%,
+    rgb(10 22 34 / 0.96) 100%
+  );
+}
+
+/* Lighter scrim for photo-backed sections that sit on light pages */
+@utility section-scrim-light {
+  background-image: linear-gradient(
+    180deg,
+    rgb(238 244 249 / 0.95) 0%,
+    rgb(238 244 249 / 0.9) 50%,
+    rgb(238 244 249 / 0.97) 100%
+  );
+}
+
+/* Pause a marquee animation on hover */
+.marquee-row:hover {
+  animation-play-state: paused;
+}
+
+@utility form-input {
+  width: 100%;
+  border-radius: 0.75rem;
+  border: 1px solid #e2e8f0;
+  background: #ffffff;
+  padding: 0.65rem 1rem;
+  font-size: 0.875rem;
+  color: var(--color-foreground);
+  transition: border-color 0.2s ease, background-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.form-input::placeholder {
+  color: #94a3b8;
+}
+
+.form-input:focus {
+  outline: none;
+  border-color: var(--color-aqua-400);
+  box-shadow: 0 0 0 3px rgb(34 211 238 / 0.15);
+}
+
+.form-input option {
+  background-color: #ffffff;
+  color: var(--color-foreground);
+}
+
+/* Scrollbar polish */
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: #f1f5f9;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--color-aqua-500);
+  border-radius: 9999px;
 }
