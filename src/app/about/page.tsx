@@ -42,21 +42,13 @@ export default function AboutPage() {
           <Reveal>
             <SectionBadge icon={Sparkles}>Our Story</SectionBadge>
             <h2 className="mt-4 font-display text-3xl font-bold tracking-tight text-ink-950 sm:text-4xl">
-              Built on trust, grown through{" "}
-              <span className="text-gradient">word of mouth</span>
+              Building trust through{" "}
+              <span className="text-gradient">quality service</span>
             </h2>
             <p className="mt-4 text-base leading-7 text-slate-600">
-              Precision Cleaning Services started in 2013 with a single van,
-              three dedicated cleaners, and a simple promise: treat every
-              space like it&apos;s our own. Word spread quickly, and what
-              began as a small residential operation has grown into a trusted
-              partner for homes, offices, and property managers across the
-              region.
-            </p>
-            <p className="mt-4 text-base leading-7 text-slate-600">
-              Today, our team of 85+ trained professionals brings the same
-              founding values to every job: reliability, transparency, and an
-              eye for detail that our clients notice immediately.
+              Precision Cleaning was founded with one goal: to provide
+              dependable, detail-oriented, commercial and residential cleaning
+              services with professionalism, integrity, and consistency.
             </p>
 
             <div className="mt-8 grid grid-cols-2 gap-6 sm:grid-cols-4">

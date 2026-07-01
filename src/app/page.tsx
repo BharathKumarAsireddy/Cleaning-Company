@@ -119,14 +119,15 @@ export default function Home() {
             </p>
           </Reveal>
 
-          <div className="mt-14 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
-            {services.slice(0, 8).map((service, i) => (
-              <Reveal key={service.slug} delay={(i % 4) * 0.08}>
+          <div className="mt-14 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+            {services.map((service, i) => (
+              <Reveal key={service.slug} delay={(i % 3) * 0.08}>
                 <ServiceCard
                   icon={service.icon}
                   title={service.title}
                   description={service.shortDescription}
                   href="/services"
+                  image={service.image}
                 />
               </Reveal>
             ))}

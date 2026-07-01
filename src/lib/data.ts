@@ -2,10 +2,9 @@ import {
   Sparkles,
   Building2,
   Home,
-  Sofa,
   WashingMachine,
   PaintBucket,
-  Wind,
+  RefreshCcw,
   ShieldCheck,
   Clock,
   Leaf,
@@ -42,6 +41,7 @@ export type Service = {
   slug: string;
   title: string;
   icon: LucideIcon;
+  image: string;
   shortDescription: string;
   description: string;
   features: string[];
@@ -49,24 +49,10 @@ export type Service = {
 
 export const services: Service[] = [
   {
-    slug: "residential-cleaning",
-    title: "Residential Cleaning",
-    icon: Home,
-    shortDescription:
-      "Recurring or one-time house cleaning tailored to your routine.",
-    description:
-      "From weekly tidy-ups to deep seasonal resets, our residential teams treat every home like their own — covering kitchens, bathrooms, living spaces, and bedrooms with eco-friendly products.",
-    features: [
-      "Flexible weekly, bi-weekly & monthly plans",
-      "Eco-friendly, pet & family safe products",
-      "Trained, background-checked cleaners",
-      "Satisfaction guarantee on every visit",
-    ],
-  },
-  {
     slug: "commercial-cleaning",
     title: "Commercial Cleaning",
     icon: Building2,
+    image: "/images/services/commercial-cleaning.jpg",
     shortDescription:
       "Reliable office & facility cleaning that keeps business moving.",
     description:
@@ -79,9 +65,26 @@ export const services: Service[] = [
     ],
   },
   {
+    slug: "residential-cleaning",
+    title: "Residential Cleaning",
+    icon: Home,
+    image: "/images/services/residential-cleaning.jpg",
+    shortDescription:
+      "Recurring or one-time house cleaning tailored to your routine.",
+    description:
+      "From weekly tidy-ups to deep seasonal resets, our residential teams treat every home like their own — covering kitchens, bathrooms, living spaces, and bedrooms with eco-friendly products.",
+    features: [
+      "Flexible weekly, bi-weekly & monthly plans",
+      "Eco-friendly, pet & family safe products",
+      "Trained, background-checked cleaners",
+      "Satisfaction guarantee on every visit",
+    ],
+  },
+  {
     slug: "deep-cleaning",
     title: "Deep Cleaning",
     icon: Sparkles,
+    image: "/images/services/deep-cleaning.jpg",
     shortDescription:
       "An intensive top-to-bottom clean for homes that need extra care.",
     description:
@@ -94,9 +97,26 @@ export const services: Service[] = [
     ],
   },
   {
+    slug: "turnover-cleaning",
+    title: "Turnover Cleaning",
+    icon: RefreshCcw,
+    image: "/images/services/turnover-cleaning.jpg",
+    shortDescription:
+      "Fast, thorough turnovers for Airbnb, vacation rentals & hotels.",
+    description:
+      "Maximize your rental income with rapid, guest-ready turnovers. Our team resets every room — linens, bathrooms, kitchen — so your next guest checks in to a spotless space.",
+    features: [
+      "Same-day turnover availability",
+      "Linen change & laundry coordination",
+      "Restocking of guest essentials",
+      "Photo-ready finish every time",
+    ],
+  },
+  {
     slug: "move-in-move-out",
     title: "Move In / Move Out",
     icon: WashingMachine,
+    image: "/images/services/move-in-out.jpg",
     shortDescription:
       "Spotless turnovers for renters, owners, landlords & agents.",
     description:
@@ -109,24 +129,10 @@ export const services: Service[] = [
     ],
   },
   {
-    slug: "carpet-upholstery",
-    title: "Carpet & Upholstery",
-    icon: Sofa,
-    shortDescription:
-      "Steam cleaning & stain removal for carpets, rugs & furniture.",
-    description:
-      "Restore the look and feel of carpets, area rugs, sofas, and chairs with hot water extraction and targeted stain treatments that lift dirt without damaging fibers.",
-    features: [
-      "Hot water extraction deep cleaning",
-      "Pet stain & odor treatment",
-      "Upholstery-safe fabric cleaning",
-      "Fast-dry techniques",
-    ],
-  },
-  {
     slug: "post-construction",
-    title: "Post-Construction",
+    title: "Post-Construction Cleaning",
     icon: PaintBucket,
+    image: "/images/services/post-construction.jpg",
     shortDescription:
       "Dust and debris removal after renovations or new builds.",
     description:
@@ -136,34 +142,6 @@ export const services: Service[] = [
       "Window track & frame cleaning",
       "Floor protection film removal & cleanup",
       "Final detail polish before handover",
-    ],
-  },
-  {
-    slug: "window-cleaning",
-    title: "Window Cleaning",
-    icon: Wind,
-    shortDescription: "Streak-free interior & exterior window care.",
-    description:
-      "Let the light in with crystal-clear windows, tracks, and sills cleaned using professional-grade, streak-free techniques for homes and offices alike.",
-    features: [
-      "Interior & exterior glass cleaning",
-      "Sills, tracks & frame detailing",
-      "Screen cleaning on request",
-      "High-rise & multi-story options",
-    ],
-  },
-  {
-    slug: "sanitization",
-    title: "Sanitization & Disinfection",
-    icon: ShieldCheck,
-    shortDescription: "Hospital-grade disinfection for peace of mind.",
-    description:
-      "Targeted sanitization of high-touch surfaces using hospital-grade, EPA-approved disinfectants — ideal for offices, clinics, schools, and homes.",
-    features: [
-      "EPA-approved disinfectants",
-      "High-touch point focus (handles, switches)",
-      "Electrostatic spraying available",
-      "Logged service reports on request",
     ],
   },
 ];
