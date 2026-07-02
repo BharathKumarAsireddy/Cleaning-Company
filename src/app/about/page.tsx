@@ -6,7 +6,7 @@ import Reveal from "@/components/Reveal";
 import SectionBadge from "@/components/SectionBadge";
 import TiltCard from "@/components/TiltCard";
 import CTASection from "@/components/CTASection";
-import { stats, team, values } from "@/lib/data";
+import { team, values } from "@/lib/data";
 
 export const metadata: Metadata = {
   title: "About Us",
@@ -56,17 +56,6 @@ export default function AboutPage() {
               cleaning, and residential homes. Every property receives
               personalized attention and a customized cleaning plan.
             </p>
-
-            <div className="mt-8 grid grid-cols-2 gap-6 sm:grid-cols-4">
-              {stats.map((stat) => (
-                <div key={stat.label}>
-                  <p className="font-display text-2xl font-extrabold text-ink-950 sm:text-3xl">
-                    {stat.value}
-                  </p>
-                  <p className="mt-1 text-xs text-slate-600">{stat.label}</p>
-                </div>
-              ))}
-            </div>
           </Reveal>
 
           {/* Why Choose Us */}

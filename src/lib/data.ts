@@ -292,18 +292,6 @@ export const testimonials: Testimonial[] = [
   },
 ];
 
-export type Stat = {
-  label: string;
-  value: string;
-};
-
-export const stats: Stat[] = [
-  { label: "Happy Clients", value: "4,800+" },
-  { label: "Years of Experience", value: "12+" },
-  { label: "Trained Cleaners", value: "85+" },
-  { label: "Cities Served", value: "9" },
-];
-
 export type Value = {
   icon: LucideIcon;
   title: string;

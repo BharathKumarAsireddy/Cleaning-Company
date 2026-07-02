@@ -22,7 +22,6 @@ import {
   serviceAreas,
   services,
   siteConfig,
-  stats,
   testimonials,
   values,
 } from "@/lib/data";
@@ -39,7 +38,7 @@ export default function Home() {
         <div className="relative mx-auto w-full max-w-7xl px-6 pb-16 pt-32 lg:px-8">
           <Reveal className="max-w-2xl">
             <SectionBadge icon={Sparkles}>
-              Trusted by 4,800+ Happy Clients
+              Trusted Cleaning Professionals
             </SectionBadge>
             <h1 className="mt-5 font-display text-4xl font-extrabold leading-tight tracking-tight text-white sm:text-5xl lg:text-6xl">
               Commercial Cleaning{" "}
@@ -75,20 +74,6 @@ export default function Home() {
                   <CheckCircle2 className="h-4 w-4 text-aqua-400" />
                   {item}
                 </span>
-              ))}
-            </div>
-          </Reveal>
-
-          {/* Stats strip */}
-          <Reveal delay={0.2}>
-            <div className="mt-20 grid grid-cols-2 gap-6 border-t border-white/10 pt-10 sm:grid-cols-4">
-              {stats.map((stat) => (
-                <div key={stat.label}>
-                  <p className="font-display text-3xl font-extrabold text-white sm:text-4xl">
-                    {stat.value}
-                  </p>
-                  <p className="mt-1 text-sm text-slate-300">{stat.label}</p>
-                </div>
               ))}
             </div>
           </Reveal>
