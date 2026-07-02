@@ -8,7 +8,8 @@ import {
   ShieldCheck,
   Clock,
   Leaf,
-  BadgeCheck,
+  MessageCircle,
+  Award,
   type LucideIcon,
 } from "lucide-react";
 
@@ -16,9 +17,9 @@ export const siteConfig = {
   name: "Precision Cleaning Services",
   shortName: "Precision Cleaning",
   tagline: "Spotless Spaces, Precision Results",
-  phone: "(555) 010-2847",
+  phone: "(609) 214-9590",
   email: "hello@precisioncleaning.com",
-  address: "482 Harbor View Drive, Suite 200, Austin, TX 78701",
+  address: "217 Pin Hov Circle, Greenacres, FL 33463",
   hours: "Mon - Sat: 7:00 AM - 7:00 PM",
   social: {
     facebook: "#",
@@ -27,6 +28,19 @@ export const siteConfig = {
     linkedin: "#",
   },
 };
+
+export const serviceAreas = [
+  "Boynton Beach",
+  "Delray Beach",
+  "Lake Worth",
+  "Greenacres",
+  "Wellington",
+  "West Palm Beach",
+  "Lantana",
+  "Palm Springs",
+  "Royal Palm Beach",
+  "Boca Raton",
+];
 
 export const navLinks = [
   { href: "/", label: "Home" },
@@ -45,6 +59,8 @@ export type Service = {
   shortDescription: string;
   description: string;
   features: string[];
+  pricing?: string;
+  subServices?: { title: string; description: string }[];
 };
 
 export const services: Service[] = [
@@ -56,12 +72,14 @@ export const services: Service[] = [
     shortDescription:
       "Reliable office & facility cleaning that keeps business moving.",
     description:
-      "Keep your workplace welcoming and hygienic with after-hours or scheduled commercial cleaning for offices, retail spaces, gyms, and medical facilities.",
+      "Keep your business clean, professional, and ready for employees and customers. We provide reliable cleaning for offices, medical offices, retail spaces, professional buildings, and other commercial properties.",
     features: [
-      "Custom cleaning schedules around your hours",
-      "Restrooms, break rooms & common areas",
-      "Floor care: vacuuming, mopping & polishing",
-      "Supply restocking & trash management",
+      "Offices & common areas",
+      "Restrooms & breakrooms",
+      "Vacuuming & mopping",
+      "Trash removal",
+      "Dusting & surface cleaning",
+      "Flexible cleaning schedules",
     ],
   },
   {
@@ -72,13 +90,15 @@ export const services: Service[] = [
     shortDescription:
       "Recurring or one-time house cleaning tailored to your routine.",
     description:
-      "From weekly tidy-ups to deep seasonal resets, our residential teams treat every home like their own — covering kitchens, bathrooms, living spaces, and bedrooms with eco-friendly products.",
+      "Keep your home clean, fresh, and comfortable with reliable cleaning tailored to your schedule.",
     features: [
-      "Flexible weekly, bi-weekly & monthly plans",
-      "Eco-friendly, pet & family safe products",
-      "Trained, background-checked cleaners",
-      "Satisfaction guarantee on every visit",
+      "Kitchens & bathrooms",
+      "Dusting",
+      "Vacuuming in living areas & bedrooms",
+      "Trash removal",
+      "Light surface wiping",
     ],
+    pricing: "Starting at $0.10 per sq. ft. Call for a free quote.",
   },
   {
     slug: "deep-cleaning",
@@ -88,13 +108,16 @@ export const services: Service[] = [
     shortDescription:
       "An intensive top-to-bottom clean for homes that need extra care.",
     description:
-      "Our deep clean tackles built-up grime in every corner — baseboards, vents, behind appliances, grout lines, and more — perfect for spring cleaning or a seasonal refresh.",
+      "A thorough, detailed cleaning designed for first-time visits, neglected spaces, or homes and businesses that need extra attention.",
     features: [
-      "Inside oven, fridge & cabinet cleaning",
-      "Baseboards, vents & light fixtures",
-      "Grout, tile & bathroom descaling",
-      "Detailed dusting of every surface",
+      "Detailed kitchen and bathroom cleaning",
+      "Baseboards, doors & trim",
+      "Dusting throughout",
+      "Vacuuming & mopping",
+      "Light switches & high-touch surfaces",
+      "Interior window sills & tracks",
     ],
+    pricing: "Starts at $0.15–$0.18 per sq. ft.",
   },
   {
     slug: "turnover-cleaning",
@@ -104,12 +127,34 @@ export const services: Service[] = [
     shortDescription:
       "Fast, thorough turnovers for Airbnb, vacation rentals & hotels.",
     description:
-      "Maximize your rental income with rapid, guest-ready turnovers. Our team resets every room — linens, bathrooms, kitchen — so your next guest checks in to a spotless space.",
+      "Thorough cleaning and preparation of a property between guests or tenants, leaving it clean, refreshed, and ready for the next occupancy. We handle Airbnb & vacation rental turnovers and seasonal rental cleaning — covering short-term rentals and snowbird/seasonal properties, which are very common in our area.",
     features: [
       "Same-day turnover availability",
       "Linen change & laundry coordination",
       "Restocking of guest essentials",
       "Photo-ready finish every time",
+    ],
+    subServices: [
+      {
+        title: "Airbnb Turnovers",
+        description:
+          "Cleaning between Airbnb guests, usually the same day someone checks out and the next guest checks in.",
+      },
+      {
+        title: "Vacation Rental Turnovers",
+        description:
+          "The same type of service, but for vacation rentals (Airbnb, VRBO, private rentals, etc.).",
+      },
+      {
+        title: "Seasonal Rental Cleaning",
+        description:
+          "Cleaning before or after a seasonal tenant's stay, or while they're renting for an extended season (weeks or months).",
+      },
+      {
+        title: "Seasonal Property Cleaning",
+        description:
+          "Cleaning a homeowner's seasonal residence before they arrive, after they leave, or while the home is vacant.",
+      },
     ],
   },
   {
@@ -120,12 +165,14 @@ export const services: Service[] = [
     shortDescription:
       "Spotless turnovers for renters, owners, landlords & agents.",
     description:
-      "Hand over or take possession of a property with confidence. We clean every empty room top to bottom so it's ready for inspection, photos, or new tenants.",
+      "Perfect for homeowners, renters, landlords, property managers, and real estate professionals. We prepare properties for their next chapter with detailed, top-to-bottom cleaning.",
     features: [
-      "Full interior cabinet & closet cleaning",
-      "Wall spot cleaning & switch plates",
-      "Appliance interior & exterior detailing",
-      "Same-day & next-day availability",
+      "Kitchens, bathrooms & living areas",
+      "Closets & appliance cleaning",
+      "Baseboards, doors & light switches",
+      "Dusting, vacuuming & mopping",
+      "Interior window sills & tracks",
+      "Final touch-up for inspections or new occupants",
     ],
   },
   {
@@ -136,12 +183,14 @@ export const services: Service[] = [
     shortDescription:
       "Dust and debris removal after renovations or new builds.",
     description:
-      "Renovation dust gets everywhere. We clear fine particles from every surface, fixture, and corner so your newly built or remodeled space is move-in ready.",
+      "Final cleaning for empty, newly built or renovated homes, offices, condos, & commercial spaces. The property must be construction-complete and free of contractor materials before our arrival.",
     features: [
-      "Fine dust removal from all surfaces",
-      "Window track & frame cleaning",
-      "Floor protection film removal & cleanup",
-      "Final detail polish before handover",
+      "Fine dust removal",
+      "Vacuuming & mopping",
+      "Cabinets, countertops & fixtures",
+      "Baseboards, doors & trim",
+      "Interior windows & sills",
+      "Final detail cleaning before occupancy",
     ],
   },
 ];
@@ -263,28 +312,34 @@ export type Value = {
 
 export const values: Value[] = [
   {
-    icon: BadgeCheck,
-    title: "Reliability",
+    icon: ShieldCheck,
+    title: "Professional & Reliable",
     description:
       "We show up on time, every time, with the same dedication to quality on every visit.",
   },
   {
     icon: Leaf,
-    title: "Eco-Conscious",
+    title: "Eco-Friendly & EPA-Approved",
     description:
-      "Green-certified products that are tough on dirt but gentle on your family, pets, and the planet.",
-  },
-  {
-    icon: ShieldCheck,
-    title: "Trust & Safety",
-    description:
-      "Every team member is background-checked, insured, and trained to the highest standards.",
+      "Green, EPA-approved cleaning products that are tough on dirt but gentle on your family, pets, and the planet.",
   },
   {
     icon: Clock,
-    title: "Time-Saving",
+    title: "Flexible Scheduling",
     description:
-      "Flexible scheduling that fits your life, so you can focus on what matters most.",
+      "Scheduling that fits your life, so you can focus on what matters most.",
+  },
+  {
+    icon: MessageCircle,
+    title: "Honest Communication",
+    description:
+      "Transparent pricing and clear, honest communication from your first quote to every visit after.",
+  },
+  {
+    icon: Award,
+    title: "Quality Workmanship",
+    description:
+      "Trained, detail-oriented cleaners who take pride in getting every corner right.",
   },
 ];
 
@@ -315,14 +370,6 @@ export const team: TeamMember[] = [
     role: "Lead Field Supervisor",
     bio: "12 years of hands-on experience leading our residential & commercial crews.",
   },
-];
-
-export const milestones = [
-  { year: "2013", text: "Founded with one van and three team members." },
-  { year: "2016", text: "Expanded to commercial & office cleaning contracts." },
-  { year: "2019", text: "Reached 1,000+ recurring residential clients." },
-  { year: "2022", text: "Launched eco-certified green cleaning line." },
-  { year: "2025", text: "Now serving 9 cities with 85+ trained professionals." },
 ];
 
 export const processSteps = [
@@ -379,54 +426,46 @@ export const pricingFaqs = [
 export type GalleryItem = {
   title: string;
   category: string;
-  image: string;
+  beforeImage: string;
+  afterImage: string;
 };
 
 export const galleryItems: GalleryItem[] = [
   {
-    title: "Modern Kitchen Deep Clean",
-    category: "Residential",
-    image: "/images/gallery/kitchen-deep-clean.jpg",
+    title: "Corporate Office Refresh",
+    category: "Commercial Cleaning",
+    beforeImage: "/images/gallery/commercial-cleaning-before.jpg",
+    afterImage: "/images/gallery/commercial-cleaning-after.jpg",
   },
   {
-    title: "Corporate Office Refresh",
-    category: "Commercial",
-    image: "/images/gallery/office-refresh.jpg",
+    title: "Everyday Home Reset",
+    category: "Residential Cleaning",
+    beforeImage: "/images/gallery/residential-cleaning-before.jpg",
+    afterImage: "/images/gallery/residential-cleaning-after.jpg",
   },
   {
     title: "Bathroom Descale & Shine",
-    category: "Residential",
-    image: "/images/gallery/bathroom-shine.jpg",
+    category: "Deep Cleaning",
+    beforeImage: "/images/gallery/deep-cleaning-before.jpg",
+    afterImage: "/images/gallery/deep-cleaning-after.jpg",
   },
   {
-    title: "Move-Out Apartment Turnover",
-    category: "Move In/Out",
-    image: "/images/gallery/moveout-apartment.jpg",
+    title: "Guest-Ready Rental Turnover",
+    category: "Turnover Cleaning",
+    beforeImage: "/images/gallery/turnover-cleaning-before.jpg",
+    afterImage: "/images/gallery/turnover-cleaning-after.jpg",
   },
   {
-    title: "Carpet Stain Restoration",
-    category: "Carpet & Upholstery",
-    image: "/images/gallery/carpet-restoration.jpg",
+    title: "Move-Out Apartment Reset",
+    category: "Move In / Move Out",
+    beforeImage: "/images/gallery/move-in-move-out-before.jpg",
+    afterImage: "/images/gallery/move-in-move-out-after.jpg",
   },
   {
     title: "Post-Renovation Dust Removal",
-    category: "Post-Construction",
-    image: "/images/gallery/post-construction.jpg",
-  },
-  {
-    title: "Retail Storefront Cleaning",
-    category: "Commercial",
-    image: "/images/gallery/retail-storefront.jpg",
-  },
-  {
-    title: "Window & Glass Detailing",
-    category: "Residential",
-    image: "/images/gallery/window-detailing.jpg",
-  },
-  {
-    title: "Living Room Sanitization",
-    category: "Sanitization",
-    image: "/images/gallery/livingroom-sanitization.jpg",
+    category: "Post-Construction Cleaning",
+    beforeImage: "/images/gallery/post-construction-before.jpg",
+    afterImage: "/images/gallery/post-construction-after.jpg",
   },
 ];
 

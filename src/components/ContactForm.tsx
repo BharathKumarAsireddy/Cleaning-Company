@@ -57,6 +57,16 @@ export default function ContactForm() {
             className="form-input"
           />
         </Field>
+        <Field label="Phone Number" htmlFor="phone">
+          <input
+            id="phone"
+            name="phone"
+            type="tel"
+            required
+            placeholder="(609) 214-9590"
+            className="form-input"
+          />
+        </Field>
         <Field label="Email Address" htmlFor="email">
           <input
             id="email"
@@ -67,12 +77,13 @@ export default function ContactForm() {
             className="form-input"
           />
         </Field>
-        <Field label="Phone Number" htmlFor="phone">
+        <Field label="Property Address" htmlFor="address" className="sm:col-span-2">
           <input
-            id="phone"
-            name="phone"
-            type="tel"
-            placeholder="(555) 010-2847"
+            id="address"
+            name="address"
+            type="text"
+            required
+            placeholder="217 Pin Hov Circle, Greenacres, FL 33463"
             className="form-input"
           />
         </Field>
@@ -89,7 +100,48 @@ export default function ContactForm() {
             <option value="other">Other / Not sure</option>
           </select>
         </Field>
-        <Field label="Message" htmlFor="message" className="sm:col-span-2">
+        <Field label="Square Footage (rough estimate)" htmlFor="squareFootage">
+          <input
+            id="squareFootage"
+            name="squareFootage"
+            type="text"
+            inputMode="numeric"
+            placeholder="e.g. 1,500 sq ft"
+            className="form-input"
+          />
+        </Field>
+        <Field label="Bedrooms" htmlFor="bedrooms">
+          <select id="bedrooms" name="bedrooms" className="form-input" defaultValue="">
+            <option value="" disabled>
+              Select bedrooms
+            </option>
+            <option value="studio">Studio</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5+">5+</option>
+          </select>
+        </Field>
+        <Field label="Bathrooms" htmlFor="bathrooms">
+          <select id="bathrooms" name="bathrooms" className="form-input" defaultValue="">
+            <option value="" disabled>
+              Select bathrooms
+            </option>
+            <option value="1">1</option>
+            <option value="1.5">1.5</option>
+            <option value="2">2</option>
+            <option value="2.5">2.5</option>
+            <option value="3">3</option>
+            <option value="3.5">3.5</option>
+            <option value="4+">4+</option>
+          </select>
+        </Field>
+        <Field
+          label="Additional Comments"
+          htmlFor="message"
+          className="sm:col-span-2"
+        >
           <textarea
             id="message"
             name="message"

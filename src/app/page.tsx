@@ -4,6 +4,7 @@ import {
   ArrowRight,
   Sparkles,
   BadgeCheck,
+  MapPin,
   ShieldCheck,
   Star,
   CheckCircle2,
@@ -18,6 +19,7 @@ import TestimonialsMarquee from "@/components/TestimonialsMarquee";
 import CTASection from "@/components/CTASection";
 import {
   processSteps,
+  serviceAreas,
   services,
   siteConfig,
   stats,
@@ -40,27 +42,26 @@ export default function Home() {
               Trusted by 4,800+ Happy Clients
             </SectionBadge>
             <h1 className="mt-5 font-display text-4xl font-extrabold leading-tight tracking-tight text-white sm:text-5xl lg:text-6xl">
-              Spotless Spaces,{" "}
-              <span className="text-gradient">Precision</span> Results
+              Commercial Cleaning{" "}
+              <span className="text-gradient">Specialists</span>
             </h1>
-            <p className="mt-6 max-w-xl text-base leading-7 text-slate-200 sm:text-lg">
-              Professional residential & commercial cleaning, tailored to
-              your schedule. Vetted teams, eco-friendly products, and a
-              spotless guarantee — every single visit.
+            <p className="mt-4 max-w-xl text-lg font-semibold text-white sm:text-xl">
+              Serving offices, professional buildings, and commercial
+              properties throughout Palm Beach County.
+            </p>
+            <p className="mt-4 max-w-xl text-base leading-7 text-slate-200 sm:text-lg">
+              We also provide residential cleaning, condo and apartment
+              cleaning, Airbnb and vacation rental turnovers, seasonal
+              property cleaning, move-in/move-out cleaning, post-construction
+              cleaning, and deep cleaning.
             </p>
             <div className="mt-8 flex flex-col gap-4 sm:flex-row">
               <Link
                 href="/contact"
                 className="group inline-flex items-center justify-center gap-2 rounded-full bg-gradient-to-r from-aqua-400 to-aqua-500 px-7 py-3.5 text-sm font-semibold text-ink-950 shadow-lg shadow-aqua-500/30 transition-transform hover:scale-105"
               >
-                Get a Free Quote
+                Request a Free Quote
                 <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
-              </Link>
-              <Link
-                href="/services"
-                className="inline-flex items-center justify-center gap-2 rounded-full border border-white/15 bg-white/5 px-7 py-3.5 text-sm font-semibold text-white backdrop-blur transition-colors hover:border-aqua-400/40 hover:text-aqua-300"
-              >
-                Explore Services
               </Link>
             </div>
 
@@ -126,7 +127,7 @@ export default function Home() {
                   icon={service.icon}
                   title={service.title}
                   description={service.shortDescription}
-                  href="/services"
+                  href={`/services/${service.slug}`}
                   image={service.image}
                 />
               </Reveal>
@@ -311,6 +312,37 @@ export default function Home() {
         <Reveal>
           <TestimonialsMarquee testimonials={testimonials} />
         </Reveal>
+      </section>
+
+      {/* Service Areas */}
+      <section className="relative overflow-hidden border-t border-slate-200 bg-white py-20 sm:py-28">
+        <div className="absolute inset-0 bg-grid opacity-30" />
+        <div className="relative mx-auto max-w-7xl px-6 lg:px-8">
+          <Reveal className="mx-auto max-w-2xl text-center">
+            <SectionBadge icon={MapPin}>Service Areas</SectionBadge>
+            <h2 className="mt-4 font-display text-3xl font-bold tracking-tight text-ink-950 sm:text-4xl">
+              Proudly serving{" "}
+              <span className="text-gradient">Palm Beach County</span>
+            </h2>
+            <p className="mt-4 text-base leading-7 text-slate-600">
+              From Boynton Beach to Boca Raton, our teams bring the same
+              spotless standard to homes and businesses across the county.
+            </p>
+          </Reveal>
+
+          <div className="mt-14 grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-5">
+            {serviceAreas.map((area, i) => (
+              <Reveal key={area} delay={(i % 5) * 0.06}>
+                <div className="flex items-center gap-3 rounded-2xl border border-slate-200 bg-white px-5 py-4 shadow-sm transition-all hover:-translate-y-1 hover:border-aqua-300 hover:shadow-lg">
+                  <MapPin className="h-5 w-5 shrink-0 text-aqua-500" />
+                  <span className="font-display text-sm font-semibold text-ink-950">
+                    {area}
+                  </span>
+                </div>
+              </Reveal>
+            ))}
+          </div>
+        </div>
       </section>
 
       <CTASection showBackground />

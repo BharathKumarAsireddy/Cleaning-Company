@@ -1,12 +1,12 @@
 import type { Metadata } from "next";
 import Image from "next/image";
-import { Award, HeartHandshake, Sparkles, Target } from "lucide-react";
+import { Award, CheckCircle2, HeartHandshake, Sparkles, Target } from "lucide-react";
 import PageHero from "@/components/PageHero";
 import Reveal from "@/components/Reveal";
 import SectionBadge from "@/components/SectionBadge";
 import TiltCard from "@/components/TiltCard";
 import CTASection from "@/components/CTASection";
-import { milestones, stats, team, values } from "@/lib/data";
+import { stats, team, values } from "@/lib/data";
 
 export const metadata: Metadata = {
   title: "About Us",
@@ -50,6 +50,12 @@ export default function AboutPage() {
               dependable, detail-oriented, commercial and residential cleaning
               services with professionalism, integrity, and consistency.
             </p>
+            <p className="mt-4 text-base leading-7 text-slate-600">
+              We specialize in offices, condos, apartments, vacation rentals,
+              seasonal properties, move-in/move-out cleaning, post-construction
+              cleaning, and residential homes. Every property receives
+              personalized attention and a customized cleaning plan.
+            </p>
 
             <div className="mt-8 grid grid-cols-2 gap-6 sm:grid-cols-4">
               {stats.map((stat) => (
@@ -63,22 +69,31 @@ export default function AboutPage() {
             </div>
           </Reveal>
 
-          {/* Timeline */}
+          {/* Why Choose Us */}
           <Reveal delay={0.1}>
-            <div className="relative space-y-6 border-l border-slate-200 pl-8">
-              {milestones.map((milestone) => (
-                <div key={milestone.year} className="relative">
-                  <span className="absolute -left-[2.45rem] flex h-5 w-5 items-center justify-center rounded-full border border-aqua-400 bg-white ring-4 ring-white">
-                    <span className="h-2 w-2 rounded-full bg-aqua-400" />
-                  </span>
-                  <p className="font-display text-sm font-bold text-aqua-600">
-                    {milestone.year}
-                  </p>
-                  <p className="mt-1 text-sm leading-6 text-slate-600">
-                    {milestone.text}
-                  </p>
-                </div>
-              ))}
+            <div className="rounded-2xl border border-slate-200 bg-slate-50/60 p-8">
+              <h3 className="font-display text-xl font-bold text-ink-950">
+                Why Choose Precision Cleaning
+              </h3>
+              <p className="mt-2 text-sm leading-6 text-slate-600">
+                Our mission is to make your space spotless without adding to
+                your to-do list — here&apos;s what that looks like in practice.
+              </p>
+              <div className="mt-6 space-y-5 border-l border-slate-200 pl-8">
+                {values.map((value) => (
+                  <div key={value.title} className="relative">
+                    <span className="absolute -left-[2.45rem] flex h-5 w-5 items-center justify-center rounded-full border border-aqua-400 bg-white ring-4 ring-white">
+                      <CheckCircle2 className="h-3.5 w-3.5 text-aqua-500" />
+                    </span>
+                    <p className="font-display text-sm font-bold text-aqua-600">
+                      {value.title}
+                    </p>
+                    <p className="mt-1 text-sm leading-6 text-slate-600">
+                      {value.description}
+                    </p>
+                  </div>
+                ))}
+              </div>
             </div>
           </Reveal>
         </div>
@@ -111,7 +126,7 @@ export default function AboutPage() {
             </p>
           </Reveal>
 
-          <div className="mt-14 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
+          <div className="mt-14 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {values.map((value, i) => (
               <Reveal key={value.title} delay={i * 0.08}>
                 <TiltCard className="h-full rounded-2xl border border-white/10 bg-white/[0.04] p-6 text-center shadow-lg shadow-ink-950/20 backdrop-blur-sm transition-all hover:-translate-y-1 hover:border-aqua-400/40">
