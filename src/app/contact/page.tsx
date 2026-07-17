@@ -9,7 +9,7 @@ import { siteConfig } from "@/lib/data";
 export const metadata: Metadata = {
   title: "Contact",
   description:
-    "Get in touch with Precision Cleaning Services for a free quote. Call, email, or fill out our form and we'll respond within one business day.",
+    "Get in touch with Precision Cleaning Services to book a service. Call, email, or fill out our form and we'll respond within one business day.",
 };
 
 const contactCards = [
@@ -45,7 +45,7 @@ export default function ContactPage() {
         icon={MessageCircle}
         title="Let's get your space"
         highlight="spotless"
-        description="Fill out the form below or reach us directly — we typically respond within one business day with a free, no-obligation quote."
+        description="Fill out the form below or reach us directly — we typically respond within one business day to confirm your service."
         crumb="Contact"
       />
 

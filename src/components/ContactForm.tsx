@@ -28,8 +28,8 @@ export default function ContactForm() {
           Thanks! Your request is in.
         </h3>
         <p className="mt-2 max-w-sm text-sm leading-6 text-slate-600">
-          One of our team members will reach out within one business day with
-          your free quote. Talk soon!
+          One of our team members will reach out within one business day to
+          confirm your service. Talk soon!
         </p>
         <button
           onClick={() => setStatus("idle")}
@@ -178,7 +178,7 @@ export default function ContactForm() {
               className="flex items-center gap-2"
             >
               <Send className="h-4 w-4" />
-              Get My Free Quote
+              Book a Service
             </motion.span>
           )}
         </AnimatePresence>

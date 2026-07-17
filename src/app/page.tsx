@@ -11,7 +11,7 @@ import {
   Gauge,
   HeartHandshake,
 } from "lucide-react";
-import HeroVideo from "@/components/HeroVideo";
+import HeroSlideshow from "@/components/HeroSlideshow";
 import Reveal from "@/components/Reveal";
 import SectionBadge from "@/components/SectionBadge";
 import ServiceCard from "@/components/ServiceCard";
@@ -31,7 +31,7 @@ export default function Home() {
     <>
       {/* Hero */}
       <section className="relative flex min-h-screen items-center overflow-hidden bg-ink-950">
-        <HeroVideo className="absolute inset-0 h-full w-full object-cover brightness-125 contrast-105 saturate-110" />
+        <HeroSlideshow className="absolute inset-0 h-full w-full" />
         <div className="absolute inset-0 bg-gradient-to-r from-ink-950/65 via-ink-950/15 to-transparent" />
         <div className="absolute inset-0 bg-gradient-to-t from-ink-950/70 via-transparent to-transparent" />
 
@@ -59,7 +59,7 @@ export default function Home() {
                 href="/contact"
                 className="group inline-flex items-center justify-center gap-2 rounded-full bg-gradient-to-r from-aqua-400 to-aqua-500 px-7 py-3.5 text-sm font-semibold text-ink-950 shadow-lg shadow-aqua-500/30 transition-transform hover:scale-105"
               >
-                Request a Free Quote
+                Book a Service
                 <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
               </Link>
             </div>

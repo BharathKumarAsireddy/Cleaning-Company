@@ -81,7 +81,7 @@ export default function Navbar() {
             href="/contact"
             className="rounded-full bg-gradient-to-r from-aqua-400 to-aqua-500 px-5 py-2.5 text-sm font-semibold text-ink-950 shadow-lg shadow-aqua-500/30 transition-transform hover:scale-105"
           >
-            Get a Free Quote
+            Book a Service
           </Link>
         </div>
 
@@ -125,7 +125,7 @@ export default function Navbar() {
                 onClick={() => setOpen(false)}
                 className="mt-2 rounded-full bg-gradient-to-r from-aqua-400 to-aqua-500 px-5 py-3 text-center text-sm font-semibold text-ink-950 shadow-lg shadow-aqua-500/30"
               >
-                Get a Free Quote
+                Book a Service
               </Link>
             </div>
           </motion.div>

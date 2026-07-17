@@ -49,7 +49,7 @@ export default function ServicesPage() {
               href="/contact"
               className="group mt-4 inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-aqua-400 to-aqua-500 px-7 py-3.5 text-sm font-semibold text-ink-950 shadow-lg shadow-aqua-500/30 transition-transform hover:scale-105"
             >
-              Request a Custom Quote
+              Request a Custom Service
               <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
             </Link>
           </Reveal>

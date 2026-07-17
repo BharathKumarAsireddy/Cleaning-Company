@@ -18,7 +18,7 @@ export const siteConfig = {
   shortName: "Precision Cleaning",
   tagline: "Spotless Spaces, Precision Results",
   phone: "(609) 214-9590",
-  email: "hello@precisioncleaning.com",
+  email: "precisioncleaningfl@gmail.com",
   address: "217 Pin Hov Circle, Greenacres, FL 33463",
   hours: "Mon - Sat: 7:00 AM - 7:00 PM",
   social: {
@@ -81,6 +81,7 @@ export const services: Service[] = [
       "Dusting & surface cleaning",
       "Flexible cleaning schedules",
     ],
+    pricing: "Starting at $0.08–$0.15 per sq. ft. Call to book a service.",
   },
   {
     slug: "residential-cleaning",
@@ -98,7 +99,7 @@ export const services: Service[] = [
       "Trash removal",
       "Light surface wiping",
     ],
-    pricing: "Starting at $0.10 per sq. ft. Call for a free quote.",
+    pricing: "Starting at $0.11 per sq. ft. Call to book a service.",
   },
   {
     slug: "deep-cleaning",
@@ -117,7 +118,7 @@ export const services: Service[] = [
       "Light switches & high-touch surfaces",
       "Interior window sills & tracks",
     ],
-    pricing: "Starts at $0.15–$0.18 per sq. ft.",
+    pricing: "Starting at $0.18–$0.25 per sq. ft. Call to book a service.",
   },
   {
     slug: "turnover-cleaning",
@@ -156,6 +157,7 @@ export const services: Service[] = [
           "Cleaning a homeowner's seasonal residence before they arrive, after they leave, or while the home is vacant.",
       },
     ],
+    pricing: "Starting at $0.25 per sq. ft. Call to book a service.",
   },
   {
     slug: "move-in-move-out",
@@ -174,6 +176,8 @@ export const services: Service[] = [
       "Interior window sills & tracks",
       "Final touch-up for inspections or new occupants",
     ],
+    pricing:
+      "Starting at $0.25 per sq. ft. — including condo & apartment cleaning. Call to book a service.",
   },
   {
     slug: "post-construction",
@@ -192,6 +196,7 @@ export const services: Service[] = [
       "Interior windows & sills",
       "Final detail cleaning before occupancy",
     ],
+    pricing: "Starting at $0.18–$0.25 per sq. ft. Call to book a service.",
   },
 ];
 
@@ -236,7 +241,7 @@ export const pricingPlans: PricingPlan[] = [
   {
     name: "Commercial",
     price: "Custom",
-    unit: "tailored quote",
+    unit: "tailored service",
     description: "Scalable cleaning programs for offices & facilities.",
     features: [
       "Flexible after-hours scheduling",
@@ -362,9 +367,9 @@ export const team: TeamMember[] = [
 
 export const processSteps = [
   {
-    title: "Get a Free Quote",
+    title: "Book a Service",
     description:
-      "Tell us about your space and needs. We'll provide a transparent, no-obligation quote within hours.",
+      "Tell us about your space and needs. We'll follow up with a transparent, no-obligation estimate within hours.",
   },
   {
     title: "Schedule Your Clean",
@@ -385,7 +390,7 @@ export const processSteps = [
 
 export const pricingFaqs = [
   {
-    question: "How is my quote calculated?",
+    question: "How is my price calculated?",
     answer:
       "Pricing is based on the size of your space, the type of cleaning needed, and how often you'd like service. Recurring plans (weekly or bi-weekly) receive discounted rates compared to one-time visits.",
   },

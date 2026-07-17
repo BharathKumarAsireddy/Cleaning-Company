@@ -47,7 +47,7 @@ export default function PricingCard({
             : "border border-slate-200 bg-white text-ink-950 hover:border-aqua-300 hover:bg-aqua-50"
         }`}
       >
-        {price === "Custom" ? "Request a Quote" : "Book This Plan"}
+        Book a Service
       </Link>
     </div>
   );

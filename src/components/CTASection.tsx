@@ -33,7 +33,7 @@ export default function CTASection({
             <span className="text-gradient">sparkles</span>?
           </h2>
           <p className="mx-auto mt-4 max-w-2xl text-base leading-7 text-slate-600">
-            Get a free, no-obligation quote in minutes. Join thousands of
+            Book a free, no-obligation service in minutes. Join thousands of
             happy homes and businesses that trust Precision Cleaning Services.
           </p>
           <div className="mt-8 flex flex-col items-center justify-center gap-4 sm:flex-row">
@@ -41,7 +41,7 @@ export default function CTASection({
               href="/contact"
               className="group inline-flex items-center justify-center gap-2 rounded-full bg-gradient-to-r from-aqua-400 to-aqua-500 px-7 py-3.5 text-sm font-semibold text-ink-950 shadow-lg shadow-aqua-500/30 transition-transform hover:scale-105"
             >
-              Get a Free Quote
+              Book a Service
               <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
             </Link>
             <a

@@ -110,7 +110,7 @@ export default async function ServiceDetailPage({
                 </h3>
                 <p className="mt-1 text-sm leading-6 text-ink-950">
                   {service.pricing ??
-                    "Pricing varies by property size and scope — request a free quote and we'll tailor an estimate for your space."}
+                    "Pricing varies by property size and scope — book a service and we'll tailor an estimate for your space."}
                 </p>
               </div>
             </div>
@@ -120,7 +120,7 @@ export default async function ServiceDetailPage({
                 href="/contact"
                 className="group inline-flex items-center justify-center gap-2 rounded-full bg-gradient-to-r from-aqua-400 to-aqua-500 px-7 py-3.5 text-sm font-semibold text-ink-950 shadow-lg shadow-aqua-500/30 transition-transform hover:scale-105"
               >
-                Request a Free Quote
+                Book a Service
                 <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
               </Link>
               <a
