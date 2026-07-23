@@ -10,6 +10,7 @@ import {
   Leaf,
   MessageCircle,
   Award,
+  Plane,
   type LucideIcon,
 } from "lucide-react";
 
@@ -198,6 +199,25 @@ export const services: Service[] = [
     ],
     pricing: "Starting at $0.18–$0.25 per sq. ft. Call to book a service.",
   },
+  {
+    slug: "absentee-homeowner-services",
+    title: "Absentee Homeowner Services",
+    icon: Plane,
+    image: "/images/hero/residential-home.jpg",
+    shortDescription:
+      "Reliable home care for seasonal residents, snowbirds & second-home owners while you're away.",
+    description:
+      "Your home deserves the same care while you're away as when you're home. Whether you're a seasonal resident, snowbird, frequent traveler, or own a second home, Precision Cleaning provides reliable cleaning services to keep your property clean, fresh, and ready for your return. We work with your schedule to provide one-time or recurring cleanings, giving you peace of mind while you're away.",
+    features: [
+      "Arrival and departure cleanings",
+      "Scheduled maintenance cleanings",
+      "Kitchen and bathroom sanitizing",
+      "Dusting and floor care",
+      "Linen changes (upon request)",
+      "Refrigerator and pantry checks (upon request)",
+      "Visual checks for any obvious concerns to report back to you",
+    ],
+  },
 ];
 
 export type PricingPlan = {
@@ -308,7 +328,7 @@ export const values: Value[] = [
     icon: ShieldCheck,
     title: "Professional & Reliable",
     description:
-      "We show up on time, every time, with the same dedication to quality on every visit.",
+      "We show up on time, with the same dedication to quality on every visit.",
   },
   {
     icon: Leaf,
@@ -332,7 +352,7 @@ export const values: Value[] = [
     icon: Award,
     title: "Quality Workmanship",
     description:
-      "Trained, detail-oriented cleaners who take pride in getting every corner right.",
+      "Trained, detail-oriented cleaners who take pride in their work.",
   },
 ];
 

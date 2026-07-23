@@ -29,14 +29,25 @@ export default function Footer() {
         <div className="grid grid-cols-1 gap-12 sm:grid-cols-2 lg:grid-cols-4">
           {/* Brand */}
           <div>
-            <Link href="/" className="flex items-center gap-2">
-              <Image
-                src="/images/logo.png"
-                alt="Precision Cleaning Services"
-                width={1254}
-                height={1254}
-                className="h-12 w-12 rounded-xl"
-              />
+            <Link href="/" className="flex items-center gap-3">
+              <div className="relative flex items-center justify-center">
+                <div className="absolute inset-0 scale-90 rounded-full bg-aqua-400/20 blur-xl" />
+                <Image
+                  src="/images/logo-icon.png"
+                  alt="Precision Cleaning Services"
+                  width={821}
+                  height={409}
+                  className="relative h-11 w-auto"
+                />
+              </div>
+              <div className="flex flex-col leading-none">
+                <span className="font-display text-lg font-extrabold tracking-tight text-white">
+                  Precision<span className="text-gradient"> Cleaning</span>
+                </span>
+                <span className="mt-0.5 text-[10px] font-semibold uppercase tracking-[0.25em] text-slate-400">
+                  Services
+                </span>
+              </div>
             </Link>
             <p className="mt-4 text-sm leading-6 text-slate-400">
               Professional residential & commercial cleaning services

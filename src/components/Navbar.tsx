@@ -29,15 +29,26 @@ export default function Navbar() {
       }`}
     >
       <nav className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4 lg:px-8">
-        <Link href="/" className="flex items-center group">
-          <Image
-            src="/images/logo.png"
-            alt="Precision Cleaning Services"
-            width={1254}
-            height={1254}
-            priority
-            className="h-12 w-12 rounded-xl shadow-lg shadow-aqua-500/20 transition-transform duration-300 group-hover:scale-105 sm:h-14 sm:w-14"
-          />
+        <Link href="/" className="group flex items-center gap-3">
+          <div className="relative flex items-center justify-center">
+            <div className="absolute inset-0 scale-90 rounded-full bg-gradient-to-br from-aqua-400/40 to-ink-500/30 blur-xl transition-all duration-300 group-hover:scale-110 group-hover:blur-2xl" />
+            <Image
+              src="/images/logo-icon.png"
+              alt="Precision Cleaning Services"
+              width={821}
+              height={409}
+              priority
+              className="relative h-10 w-auto drop-shadow-[0_2px_6px_rgba(10,22,34,0.25)] transition-transform duration-300 group-hover:scale-105 sm:h-12"
+            />
+          </div>
+          <div className="hidden flex-col leading-none sm:flex">
+            <span className="font-display text-lg font-extrabold tracking-tight text-ink-950 sm:text-xl">
+              Precision<span className="text-gradient"> Cleaning</span>
+            </span>
+            <span className="mt-0.5 text-[10px] font-semibold uppercase tracking-[0.25em] text-slate-500 sm:text-[11px]">
+              Services
+            </span>
+          </div>
         </Link>
 
         {/* Desktop nav */}

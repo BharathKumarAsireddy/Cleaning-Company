@@ -1,12 +1,11 @@
 import type { Metadata } from "next";
 import Image from "next/image";
-import { Award, CheckCircle2, HeartHandshake, Sparkles, Target } from "lucide-react";
+import { CheckCircle2, HeartHandshake, Sparkles, Target } from "lucide-react";
 import PageHero from "@/components/PageHero";
 import Reveal from "@/components/Reveal";
 import SectionBadge from "@/components/SectionBadge";
 import TiltCard from "@/components/TiltCard";
-import CTASection from "@/components/CTASection";
-import { team, values } from "@/lib/data";
+import { values } from "@/lib/data";
 
 export const metadata: Metadata = {
   title: "About Us",
@@ -53,7 +52,8 @@ export default function AboutPage() {
             <p className="mt-4 text-base leading-7 text-slate-600">
               We specialize in offices, condos, apartments, vacation rentals,
               seasonal properties, move-in/move-out cleaning, post-construction
-              cleaning, and residential homes. Every property receives
+              cleaning, residential homes, and absentee homeowner services for
+              seasonal residents and snowbirds. Every property receives
               personalized attention and a customized cleaning plan.
             </p>
           </Reveal>
@@ -135,58 +135,6 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Team */}
-      <section className="relative overflow-hidden bg-white py-20 sm:py-28">
-        <div className="absolute inset-0">
-          <Image
-            src="/images/backgrounds/testimonials-bg.jpg"
-            alt=""
-            fill
-            sizes="100vw"
-            className="object-cover opacity-[0.05]"
-          />
-          <div className="absolute inset-0 section-scrim-light" />
-        </div>
-        <div className="relative mx-auto max-w-7xl px-6 lg:px-8">
-          <Reveal className="mx-auto max-w-2xl text-center">
-            <SectionBadge icon={Award}>Meet The Team</SectionBadge>
-            <h2 className="mt-4 font-display text-3xl font-bold tracking-tight text-ink-950 sm:text-4xl">
-              The faces behind{" "}
-              <span className="text-gradient">your clean space</span>
-            </h2>
-            <p className="mt-4 text-base leading-7 text-slate-600">
-              A leadership team committed to training, supporting, and
-              empowering every cleaner on staff.
-            </p>
-          </Reveal>
-
-          <div className="mt-14 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
-            {team.map((member, i) => (
-              <Reveal key={member.name} delay={i * 0.08}>
-                <div className="group h-full rounded-2xl border border-slate-200 bg-white p-6 text-center shadow-sm transition-all hover:-translate-y-1 hover:border-aqua-300 hover:shadow-lg">
-                  <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-gradient-to-br from-aqua-400 to-ink-500 font-display text-xl font-bold text-white shadow-lg shadow-aqua-500/20 transition-transform duration-300 group-hover:scale-110">
-                    {member.name
-                      .split(" ")
-                      .map((n) => n[0])
-                      .join("")}
-                  </div>
-                  <h3 className="mt-4 font-display text-base font-semibold text-ink-950">
-                    {member.name}
-                  </h3>
-                  <p className="text-sm font-medium text-aqua-600">
-                    {member.role}
-                  </p>
-                  <p className="mt-2 text-sm leading-6 text-slate-600">
-                    {member.bio}
-                  </p>
-                </div>
-              </Reveal>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <CTASection showBackground />
     </>
   );
 }

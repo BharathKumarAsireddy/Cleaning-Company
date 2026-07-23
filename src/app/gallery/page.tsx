@@ -3,7 +3,6 @@ import { ImageIcon } from "lucide-react";
 import PageHero from "@/components/PageHero";
 import Reveal from "@/components/Reveal";
 import GalleryGrid from "@/components/GalleryGrid";
-import CTASection from "@/components/CTASection";
 import { galleryItems } from "@/lib/data";
 
 export const metadata: Metadata = {
@@ -31,8 +30,6 @@ export default function GalleryPage() {
           </Reveal>
         </div>
       </section>
-
-      <CTASection />
     </>
   );
 }

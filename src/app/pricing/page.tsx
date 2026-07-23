@@ -7,7 +7,6 @@ import Reveal from "@/components/Reveal";
 import SectionBadge from "@/components/SectionBadge";
 import PricingCard from "@/components/PricingCard";
 import Accordion from "@/components/Accordion";
-import CTASection from "@/components/CTASection";
 import { pricingFaqs, pricingPlans, services } from "@/lib/data";
 
 export const metadata: Metadata = {
@@ -134,8 +133,6 @@ export default function PricingPage() {
           </Reveal>
         </div>
       </section>
-
-      <CTASection showBackground />
     </>
   );
 }

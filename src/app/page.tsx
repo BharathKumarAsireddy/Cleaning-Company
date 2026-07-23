@@ -32,27 +32,27 @@ export default function Home() {
       {/* Hero */}
       <section className="relative flex min-h-screen items-center overflow-hidden bg-ink-950">
         <HeroSlideshow className="absolute inset-0 h-full w-full" />
-        <div className="absolute inset-0 bg-gradient-to-r from-ink-950/65 via-ink-950/15 to-transparent" />
-        <div className="absolute inset-0 bg-gradient-to-t from-ink-950/70 via-transparent to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-r from-ink-950/90 via-ink-950/60 to-ink-950/20" />
+        <div className="absolute inset-0 bg-gradient-to-t from-ink-950/85 via-ink-950/10 to-ink-950/30" />
 
         <div className="relative mx-auto w-full max-w-7xl px-6 pb-16 pt-32 lg:px-8">
           <Reveal className="max-w-2xl">
             <SectionBadge icon={Sparkles}>
               Trusted Cleaning Professionals
             </SectionBadge>
-            <h1 className="mt-5 font-display text-4xl font-extrabold leading-tight tracking-tight text-white sm:text-5xl lg:text-6xl">
-              Commercial Cleaning{" "}
+            <h1 className="mt-5 font-display text-4xl font-extrabold leading-tight tracking-tight text-white [text-shadow:0_2px_16px_rgb(0_0_0_/_55%)] sm:text-5xl lg:text-6xl">
+              Professional Cleaning{" "}
               <span className="text-gradient">Specialists</span>
             </h1>
-            <p className="mt-4 max-w-xl text-lg font-semibold text-white sm:text-xl">
+            <p className="mt-4 max-w-xl text-lg font-semibold text-white [text-shadow:0_1px_10px_rgb(0_0_0_/_55%)] sm:text-xl">
               Serving offices, professional buildings, and commercial
               properties throughout Palm Beach County.
             </p>
-            <p className="mt-4 max-w-xl text-base leading-7 text-slate-200 sm:text-lg">
+            <p className="mt-4 max-w-xl text-base leading-7 text-slate-100 [text-shadow:0_1px_8px_rgb(0_0_0_/_50%)] sm:text-lg">
               We also provide residential cleaning, condo and apartment
               cleaning, Airbnb and vacation rental turnovers, seasonal
               property cleaning, move-in/move-out cleaning, post-construction
-              cleaning, and deep cleaning.
+              cleaning, deep cleaning, and absentee homeowner services.
             </p>
             <div className="mt-8 flex flex-col gap-4 sm:flex-row">
               <Link
@@ -64,7 +64,7 @@ export default function Home() {
               </Link>
             </div>
 
-            <div className="mt-8 flex flex-wrap items-center gap-x-6 gap-y-2 text-sm text-slate-200">
+            <div className="mt-8 flex flex-wrap items-center gap-x-6 gap-y-2 text-sm text-slate-100 [text-shadow:0_1px_6px_rgb(0_0_0_/_50%)]">
               {[
                 "Eco-friendly products",
                 "Vetted & insured teams",

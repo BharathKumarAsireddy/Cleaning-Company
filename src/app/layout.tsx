@@ -29,6 +29,8 @@ export const metadata: Metadata = {
     "deep cleaning",
     "house cleaning services",
     "office cleaning",
+    "absentee homeowner services",
+    "snowbird home cleaning",
   ],
 };
 

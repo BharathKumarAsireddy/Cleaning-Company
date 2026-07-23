@@ -17,10 +17,6 @@ const slides = [
     src: "/images/hero/commercial-interior.jpg",
     alt: "Clean, bright commercial office interior",
   },
-  {
-    src: "/images/hero/residential-modern-home.jpg",
-    alt: "Modern luxury home exterior",
-  },
 ];
 
 export default function HeroSlideshow({ className }: { className?: string }) {
@@ -50,7 +46,7 @@ export default function HeroSlideshow({ className }: { className?: string }) {
             fill
             priority={index === 0}
             sizes="100vw"
-            className="object-cover brightness-110 contrast-105 saturate-110"
+            className="object-cover brightness-95 contrast-105 saturate-110"
           />
         </motion.div>
       </AnimatePresence>

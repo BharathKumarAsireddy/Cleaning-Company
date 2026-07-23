@@ -4,7 +4,6 @@ import { ArrowRight, Sparkles } from "lucide-react";
 import PageHero from "@/components/PageHero";
 import Reveal from "@/components/Reveal";
 import ServiceCard from "@/components/ServiceCard";
-import CTASection from "@/components/CTASection";
 import { services } from "@/lib/data";
 
 export const metadata: Metadata = {
@@ -55,8 +54,6 @@ export default function ServicesPage() {
           </Reveal>
         </div>
       </section>
-
-      <CTASection />
     </>
   );
 }
