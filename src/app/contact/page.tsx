@@ -44,7 +44,7 @@ export default function ContactPage() {
         eyebrow="Get In Touch"
         icon={MessageCircle}
         title="Let's get your space"
-        highlight="spotless"
+        highlight="pristine"
         description="Fill out the form below or reach us directly — we typically respond within one business day to confirm your service."
         crumb="Contact"
       />
@@ -101,7 +101,7 @@ export default function ContactPage() {
                     <MapPin className="h-6 w-6 text-ink-950" />
                   </div>
                   <p className="font-display text-sm font-semibold text-white">
-                    Austin, TX & Surrounding Areas
+                    Greenacres, FL & Surrounding Areas
                   </p>
                   <p className="max-w-xs px-6 text-xs text-slate-400">
                     {siteConfig.address}

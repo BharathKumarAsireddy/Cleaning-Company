@@ -126,6 +126,10 @@ export default function PricingPage() {
               Frequently asked{" "}
               <span className="text-gradient">questions</span>
             </h2>
+            <p className="mt-4 text-base leading-7 text-slate-300">
+              Still have questions? Let&apos;s transform your space — reach
+              out and we&apos;ll walk you through it.
+            </p>
           </Reveal>
 
           <Reveal delay={0.1} className="mt-10">

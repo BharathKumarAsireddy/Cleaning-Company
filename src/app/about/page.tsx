@@ -10,7 +10,7 @@ import { values } from "@/lib/data";
 export const metadata: Metadata = {
   title: "About Us",
   description:
-    "Learn about Precision Cleaning Services — our story, our values, and the dedicated team behind every spotless space since 2013.",
+    "Learn about Precision Cleaning Services — our story, our values, and the dedicated team behind every pristine space since 2013.",
 };
 
 export default function AboutPage() {
@@ -20,7 +20,7 @@ export default function AboutPage() {
         eyebrow="About Precision Cleaning"
         icon={HeartHandshake}
         title="The people behind your"
-        highlight="spotless space"
+        highlight="pristine space"
         description="For over a decade, we've built a reputation on trust, consistency, and an obsessive attention to detail — one home and office at a time."
         crumb="About"
       />
@@ -65,7 +65,7 @@ export default function AboutPage() {
                 Why Choose Precision Cleaning
               </h3>
               <p className="mt-2 text-sm leading-6 text-slate-600">
-                Our mission is to make your space spotless without adding to
+                Our mission is to make your space pristine without adding to
                 your to-do list — here&apos;s what that looks like in practice.
               </p>
               <div className="mt-6 space-y-5 border-l border-slate-200 pl-8">
@@ -109,7 +109,7 @@ export default function AboutPage() {
               <span className="text-gradient">everything we do</span>
             </h2>
             <p className="mt-4 text-base leading-7 text-slate-300">
-              Our mission is simple: deliver consistently spotless results
+              Our mission is simple: deliver consistently pristine results
               while making life easier for our clients and creating great
               jobs for our team.
             </p>

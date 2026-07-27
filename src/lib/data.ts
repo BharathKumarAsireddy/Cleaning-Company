@@ -17,7 +17,7 @@ import {
 export const siteConfig = {
   name: "Precision Cleaning Services",
   shortName: "Precision Cleaning",
-  tagline: "Spotless Spaces, Precision Results",
+  tagline: "Pristine Spaces, Precision Results",
   phone: "(609) 214-9590",
   email: "precisioncleaningfl@gmail.com",
   address: "217 Pin Hov Circle, Greenacres, FL 33463",
@@ -25,8 +25,7 @@ export const siteConfig = {
   social: {
     facebook: "#",
     instagram: "#",
-    twitter: "#",
-    linkedin: "#",
+    google: "#",
   },
 };
 
@@ -166,7 +165,7 @@ export const services: Service[] = [
     icon: WashingMachine,
     image: "/images/services/move-in-out.jpg",
     shortDescription:
-      "Spotless turnovers for renters, owners, landlords & agents.",
+      "Pristine turnovers for renters, owners, landlords & agents.",
     description:
       "Perfect for homeowners, renters, landlords, property managers, and real estate professionals. We prepare properties for their next chapter with detailed, top-to-bottom cleaning.",
     features: [
@@ -303,7 +302,7 @@ export const testimonials: Testimonial[] = [
     name: "Maria Lopez",
     role: "Property Manager",
     quote:
-      "Their move-out cleaning service helps us turn over units faster than ever. Every unit comes back spotless and inspection-ready. Highly recommend for landlords.",
+      "Their move-out cleaning service helps us turn over units faster than ever. Every unit comes back immaculate and inspection-ready. Highly recommend for landlords.",
     rating: 5,
     avatar: "/images/testimonials/maria-lopez.jpg",
   },
@@ -311,7 +310,7 @@ export const testimonials: Testimonial[] = [
     name: "James Patterson",
     role: "Homeowner, Downtown Loft",
     quote:
-      "Booking was effortless and the deep clean exceeded expectations — places I didn't even think to clean were spotless. Worth every penny.",
+      "Booking was effortless and the deep clean exceeded expectations — places I didn't even think to clean were immaculate. Worth every penny.",
     rating: 5,
     avatar: "/images/testimonials/james-patterson.jpg",
   },
@@ -366,7 +365,7 @@ export const team: TeamMember[] = [
   {
     name: "Olivia Bennett",
     role: "Founder & CEO",
-    bio: "Started Precision Cleaning in 2013 with a single van and a passion for spotless spaces.",
+    bio: "Started Precision Cleaning in 2013 with a single van and a passion for pristine spaces.",
   },
   {
     name: "Marcus Reed",
@@ -402,7 +401,7 @@ export const processSteps = [
       "Our trained, vetted team arrives on time and gets to work using eco-friendly equipment.",
   },
   {
-    title: "Enjoy a Spotless Space",
+    title: "Enjoy a Pristine Space",
     description:
       "Walk into a fresh, sparkling space — backed by our 100% satisfaction guarantee.",
   },
@@ -420,19 +419,14 @@ export const pricingFaqs = [
       "No — our teams arrive fully equipped with professional-grade, eco-friendly products and tools. If you prefer we use specific products you provide, just let us know.",
   },
   {
-    question: "What if I'm not satisfied with the cleaning?",
+    question: "Do I need to be home during my appointment?",
     answer:
-      "All of our plans are backed by a 100% satisfaction guarantee. If something isn't right, contact us within 24 hours and we'll return to make it right at no extra cost.",
+      "Not at all. Many clients share entry instructions or a lockbox code so our team can get to work on your schedule, whether you're home or not.",
   },
   {
-    question: "Can I change or cancel my recurring plan?",
+    question: "How far in advance should I book a service?",
     answer:
-      "Yes, recurring plans are flexible with no long-term contracts. You can adjust frequency, reschedule, or cancel any time with 48 hours notice.",
-  },
-  {
-    question: "Are your cleaners insured and background-checked?",
-    answer:
-      "Absolutely. Every team member is fully insured, bonded, and passes a thorough background check before joining our team.",
+      "A few days' notice helps us match you with the right team, but we're often able to accommodate shorter-notice requests too — just give us a call and we'll find a time that works.",
   },
 ];
 

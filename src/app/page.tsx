@@ -311,7 +311,7 @@ export default function Home() {
             </h2>
             <p className="mt-4 text-base leading-7 text-slate-600">
               From Boynton Beach to Boca Raton, our teams bring the same
-              spotless standard to homes and businesses across the county.
+              pristine standard to homes and businesses across the county.
             </p>
           </Reveal>
 

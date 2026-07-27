@@ -4,8 +4,7 @@ import { Phone, Mail, MapPin, Clock } from "lucide-react";
 import {
   FacebookIcon,
   InstagramIcon,
-  XIcon,
-  LinkedInIcon,
+  GoogleIcon,
 } from "@/components/icons/SocialIcons";
 import { navLinks, services, siteConfig } from "@/lib/data";
 
@@ -57,8 +56,7 @@ export default function Footer() {
               {[
                 { icon: FacebookIcon, href: siteConfig.social.facebook },
                 { icon: InstagramIcon, href: siteConfig.social.instagram },
-                { icon: XIcon, href: siteConfig.social.twitter },
-                { icon: LinkedInIcon, href: siteConfig.social.linkedin },
+                { icon: GoogleIcon, href: siteConfig.social.google },
               ].map(({ icon: Icon, href }, i) => (
                 <a
                   key={i}
@@ -97,7 +95,7 @@ export default function Footer() {
               Services
             </h3>
             <ul className="mt-4 space-y-3 text-sm">
-              {services.slice(0, 6).map((service) => (
+              {services.map((service) => (
                 <li key={service.slug}>
                   <Link
                     href={`/services/${service.slug}`}
@@ -151,7 +149,7 @@ export default function Footer() {
             &copy; {new Date().getFullYear()} {siteConfig.name}. All rights
             reserved.
           </p>
-          <p>Designed with care for spotless spaces.</p>
+          <p>Designed with care for pristine spaces.</p>
         </div>
       </div>
     </footer>
