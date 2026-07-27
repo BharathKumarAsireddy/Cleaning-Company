@@ -43,8 +43,8 @@ export default function ContactPage() {
       <PageHero
         eyebrow="Get In Touch"
         icon={MessageCircle}
-        title="Let's get your space"
-        highlight="pristine"
+        title="Let's get your space looking its"
+        highlight="best"
         description="Fill out the form below or reach us directly — we typically respond within one business day to confirm your service."
         crumb="Contact"
       />

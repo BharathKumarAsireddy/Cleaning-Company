@@ -6,7 +6,6 @@ import { ArrowRight, Check, PhoneCall, Tag } from "lucide-react";
 import PageHero from "@/components/PageHero";
 import Reveal from "@/components/Reveal";
 import ServiceCard from "@/components/ServiceCard";
-import CTASection from "@/components/CTASection";
 import { services, siteConfig } from "@/lib/data";
 
 export function generateStaticParams() {
@@ -185,8 +184,6 @@ export default async function ServiceDetailPage({
           </div>
         </section>
       )}
-
-      <CTASection />
     </>
   );
 }

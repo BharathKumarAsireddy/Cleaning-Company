@@ -107,9 +107,9 @@ export const services: Service[] = [
     icon: Sparkles,
     image: "/images/services/deep-cleaning.jpg",
     shortDescription:
-      "An intensive top-to-bottom clean for homes that need extra care.",
+      "For homes and businesses that need more than a routine clean.",
     description:
-      "A thorough, detailed cleaning designed for first-time visits, neglected spaces, or homes and businesses that need extra attention.",
+      "Designed for spaces that require additional cleaning beyond a standard service.",
     features: [
       "Detailed kitchen and bathroom cleaning",
       "Baseboards, doors & trim",
@@ -118,7 +118,7 @@ export const services: Service[] = [
       "Light switches & high-touch surfaces",
       "Interior window sills & tracks",
     ],
-    pricing: "Starting at $0.18–$0.25 per sq. ft. Call to book a service.",
+    pricing: "Starting at $0.25 per sq. ft. Call to book a service.",
   },
   {
     slug: "turnover-cleaning",
@@ -401,9 +401,9 @@ export const processSteps = [
       "Our trained, vetted team arrives on time and gets to work using eco-friendly equipment.",
   },
   {
-    title: "Enjoy a Pristine Space",
+    title: "Enjoy the Results",
     description:
-      "Walk into a fresh, sparkling space — backed by our 100% satisfaction guarantee.",
+      "Count on dependable, detail-oriented cleaning that leaves your space looking its best.",
   },
 ];
 

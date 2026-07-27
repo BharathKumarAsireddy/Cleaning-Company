@@ -5,7 +5,6 @@ import {
   Sparkles,
   BadgeCheck,
   MapPin,
-  ShieldCheck,
   Star,
   CheckCircle2,
   Gauge,
@@ -16,7 +15,6 @@ import Reveal from "@/components/Reveal";
 import SectionBadge from "@/components/SectionBadge";
 import ServiceCard from "@/components/ServiceCard";
 import TestimonialsMarquee from "@/components/TestimonialsMarquee";
-import CTASection from "@/components/CTASection";
 import {
   processSteps,
   serviceAreas,
@@ -42,11 +40,11 @@ export default function Home() {
             </SectionBadge>
             <h1 className="mt-5 font-display text-4xl font-extrabold leading-tight tracking-tight text-white [text-shadow:0_2px_16px_rgb(0_0_0_/_55%)] sm:text-5xl lg:text-6xl">
               Professional Cleaning{" "}
-              <span className="text-gradient">Specialists</span>
+              <span className="text-gradient">Service</span>
             </h1>
             <p className="mt-4 max-w-xl text-lg font-semibold text-white [text-shadow:0_1px_10px_rgb(0_0_0_/_55%)] sm:text-xl">
-              Serving offices, professional buildings, and commercial
-              properties throughout Palm Beach County.
+              From homes to businesses, we provide dependable, high-quality
+              cleaning services tailored to your needs.
             </p>
             <p className="mt-4 max-w-xl text-base leading-7 text-slate-100 [text-shadow:0_1px_8px_rgb(0_0_0_/_50%)] sm:text-lg">
               We also provide residential cleaning, condo and apartment
@@ -68,7 +66,6 @@ export default function Home() {
               {[
                 "Eco-friendly products",
                 "Vetted & insured teams",
-                "100% satisfaction guarantee",
               ].map((item) => (
                 <span key={item} className="flex items-center gap-2">
                   <CheckCircle2 className="h-4 w-4 text-aqua-400" />
@@ -205,17 +202,6 @@ export default function Home() {
                 </div>
                 <div className="flex items-center justify-between rounded-2xl border border-slate-100 bg-slate-50 p-4">
                   <div className="flex items-center gap-3">
-                    <ShieldCheck className="h-5 w-5 text-aqua-600" />
-                    <span className="text-sm font-medium text-slate-700">
-                      Insured & Background-Checked
-                    </span>
-                  </div>
-                  <span className="font-display text-lg font-bold text-ink-950">
-                    100%
-                  </span>
-                </div>
-                <div className="flex items-center justify-between rounded-2xl border border-slate-100 bg-slate-50 p-4">
-                  <div className="flex items-center gap-3">
                     <HeartHandshake className="h-5 w-5 text-aqua-600" />
                     <span className="text-sm font-medium text-slate-700">
                       Repeat Clients
@@ -310,8 +296,8 @@ export default function Home() {
               <span className="text-gradient">Palm Beach County</span>
             </h2>
             <p className="mt-4 text-base leading-7 text-slate-600">
-              From Boynton Beach to Boca Raton, our teams bring the same
-              pristine standard to homes and businesses across the county.
+              From Boynton to Boca Raton, our team brings the same
+              high-standard cleaning to every job.
             </p>
           </Reveal>
 
@@ -329,8 +315,6 @@ export default function Home() {
           </div>
         </div>
       </section>
-
-      <CTASection showBackground />
 
       {/* Schema-friendly hidden contact info for SEO */}
       <span className="sr-only">{siteConfig.address}</span>
