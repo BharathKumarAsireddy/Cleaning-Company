@@ -23,7 +23,7 @@ export default function PricingPage() {
         icon={Tag}
         title="Plans that fit your"
         highlight="space & budget"
-        description="No hidden fees, no long-term contracts. Choose a plan below or book a custom service tailored to your needs."
+        description="Pricing is based on the size of your property and the services you need. Request a personalized quote to get started."
         crumb="Pricing"
       />
 
@@ -36,15 +36,22 @@ export default function PricingPage() {
               Pricing by <span className="text-gradient">service</span>
             </h2>
             <p className="mt-4 text-base leading-7 text-slate-600">
-              Every space is different — these starting rates give you a
-              ballpark based on square footage. Call or book a service for
-              an exact estimate.
+              Every property is different. Complete the quote form for a
+              personalized estimate based on your property and the services
+              you need.
             </p>
           </Reveal>
 
           <div className="mt-14 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {services
               .filter((service) => service.pricing)
+              .sort((a, b) =>
+                a.slug === "deep-cleaning"
+                  ? 1
+                  : b.slug === "deep-cleaning"
+                    ? -1
+                    : 0
+              )
               .map((service, i) => (
                 <Reveal key={service.slug} delay={i * 0.08} className="h-full">
                   <Link
@@ -97,10 +104,8 @@ export default function PricingPage() {
 
           <Reveal delay={0.2} className="mx-auto mt-10 max-w-2xl text-center">
             <p className="text-sm text-slate-600">
-              Prices vary based on home size, condition, and frequency.
-              Recurring plans (weekly/bi-weekly) receive up to 20% off
-              one-time rates. All plans include eco-friendly products,
-              vetted teams, and our satisfaction guarantee.
+              Every plan includes eco-friendly products and a trained, vetted
+              team — request a quote for pricing tailored to your space.
             </p>
           </Reveal>
         </div>

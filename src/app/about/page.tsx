@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import Image from "next/image";
-import { CheckCircle2, HeartHandshake, Sparkles, Target } from "lucide-react";
-import PageHero from "@/components/PageHero";
+import { CheckCircle2, Sparkles, Target } from "lucide-react";
 import Reveal from "@/components/Reveal";
 import SectionBadge from "@/components/SectionBadge";
 import TiltCard from "@/components/TiltCard";
@@ -10,23 +9,14 @@ import { values } from "@/lib/data";
 export const metadata: Metadata = {
   title: "About Us",
   description:
-    "Learn about Precision Cleaning Services — our story, our values, and the dedicated team behind every pristine space since 2013.",
+    "Learn about Precision Cleaning Services — our story, our values, and our commitment to dependable, detail-oriented cleaning.",
 };
 
 export default function AboutPage() {
   return (
     <>
-      <PageHero
-        eyebrow="About Precision Cleaning"
-        icon={HeartHandshake}
-        title="The people behind your"
-        highlight="pristine space"
-        description="For over a decade, we've built a reputation on trust, consistency, and an obsessive attention to detail — one home and office at a time."
-        crumb="About"
-      />
-
       {/* Story */}
-      <section className="relative overflow-hidden bg-white py-20 sm:py-28">
+      <section className="relative overflow-hidden bg-white pb-20 pt-36 sm:pb-28 sm:pt-44">
         <div className="absolute inset-0">
           <Image
             src="/images/backgrounds/cta-bg.jpg"
@@ -45,16 +35,16 @@ export default function AboutPage() {
               <span className="text-gradient">quality service</span>
             </h2>
             <p className="mt-4 text-base leading-7 text-slate-600">
-              Precision Cleaning was founded with one goal: to provide
-              dependable, detail-oriented, commercial and residential cleaning
-              services with professionalism, integrity, and consistency.
+              Precision Cleaning was founded to provide dependable
+              residential and commercial cleaning services with
+              professionalism, integrity, and attention to detail.
             </p>
             <p className="mt-4 text-base leading-7 text-slate-600">
-              We specialize in offices, condos, apartments, vacation rentals,
-              seasonal properties, move-in/move-out cleaning, post-construction
-              cleaning, residential homes, and absentee homeowner services for
-              seasonal residents and snowbirds. Every property receives
-              personalized attention and a customized cleaning plan.
+              We proudly serve homes, condos, apartments, offices, Airbnb and
+              vacation rentals, move-in/move-out cleanings, post-construction
+              projects, and seasonal or absentee homeowner properties. Every
+              property receives personalized attention and a customized
+              cleaning plan.
             </p>
           </Reveal>
 
@@ -65,8 +55,8 @@ export default function AboutPage() {
                 Why Choose Precision Cleaning
               </h3>
               <p className="mt-2 text-sm leading-6 text-slate-600">
-                Our mission is to make your space pristine without adding to
-                your to-do list — here&apos;s what that looks like in practice.
+                Our mission is to provide dependable, detail-oriented cleaning
+                that gives you more time to focus on what matters most.
               </p>
               <div className="mt-6 space-y-5 border-l border-slate-200 pl-8">
                 {values.map((value) => (
@@ -109,9 +99,8 @@ export default function AboutPage() {
               <span className="text-gradient">everything we do</span>
             </h2>
             <p className="mt-4 text-base leading-7 text-slate-300">
-              Our mission is simple: deliver consistently pristine results
-              while making life easier for our clients and creating great
-              jobs for our team.
+              Our mission is simple: to provide reliable, quality cleaning
+              you can count on.
             </p>
           </Reveal>
 

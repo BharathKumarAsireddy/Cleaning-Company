@@ -221,8 +221,6 @@ export const services: Service[] = [
 
 export type PricingPlan = {
   name: string;
-  price: string;
-  unit: string;
   description: string;
   features: string[];
   highlighted?: boolean;
@@ -231,8 +229,6 @@ export type PricingPlan = {
 export const pricingPlans: PricingPlan[] = [
   {
     name: "Essential",
-    price: "$99",
-    unit: "per visit",
     description: "A reliable standard clean for everyday upkeep.",
     features: [
       "Up to 2 bedrooms / 2 bathrooms",
@@ -244,8 +240,6 @@ export const pricingPlans: PricingPlan[] = [
   },
   {
     name: "Signature",
-    price: "$179",
-    unit: "per visit",
     description: "Our most popular plan for homes that need a deeper touch.",
     features: [
       "Up to 4 bedrooms / 3 bathrooms",
@@ -259,8 +253,6 @@ export const pricingPlans: PricingPlan[] = [
   },
   {
     name: "Commercial",
-    price: "Custom",
-    unit: "tailored service",
     description: "Scalable cleaning programs for offices & facilities.",
     features: [
       "Flexible after-hours scheduling",
@@ -345,13 +337,13 @@ export const values: Value[] = [
     icon: MessageCircle,
     title: "Honest Communication",
     description:
-      "Transparent pricing and clear, honest communication from your first quote to every visit after.",
+      "Clear communication and transparent pricing from your first quote to every visit.",
   },
   {
     icon: Award,
     title: "Quality Workmanship",
     description:
-      "Trained, detail-oriented cleaners who take pride in their work.",
+      "We take pride in delivering quality cleaning with attention to detail.",
   },
 ];
 
@@ -424,9 +416,9 @@ export const pricingFaqs = [
       "Not at all. Many clients share entry instructions or a lockbox code so our team can get to work on your schedule, whether you're home or not.",
   },
   {
-    question: "How far in advance should I book a service?",
+    question: "How soon can I schedule a cleaning?",
     answer:
-      "A few days' notice helps us match you with the right team, but we're often able to accommodate shorter-notice requests too — just give us a call and we'll find a time that works.",
+      "Complete the quote form, and we'll contact you to schedule your cleaning.",
   },
 ];
 

@@ -4,8 +4,6 @@ import type { PricingPlan } from "@/lib/data";
 
 export default function PricingCard({
   name,
-  price,
-  unit,
   description,
   features,
   highlighted,
@@ -25,12 +23,6 @@ export default function PricingCard({
       )}
       <h3 className="font-display text-xl font-bold text-ink-950">{name}</h3>
       <p className="mt-2 text-sm text-slate-600">{description}</p>
-      <div className="mt-6 flex items-baseline gap-2">
-        <span className="font-display text-4xl font-extrabold text-ink-950">
-          {price}
-        </span>
-        <span className="text-sm text-slate-500">{unit}</span>
-      </div>
       <ul className="mt-6 flex-1 space-y-3">
         {features.map((feature) => (
           <li key={feature} className="flex items-start gap-3 text-sm text-slate-700">

@@ -20,7 +20,7 @@ export default function ServicesPage() {
         icon={Sparkles}
         title="Cleaning services for"
         highlight="every space"
-        description="Whether it's a weekly home refresh or a full commercial contract, our trained teams bring the same precision and care to every job."
+        description="Professional cleaning services for homes, businesses, and vacation rentals."
         crumb="Services"
       />
 

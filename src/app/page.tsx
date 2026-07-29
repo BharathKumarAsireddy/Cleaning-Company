@@ -93,13 +93,10 @@ export default function Home() {
           <Reveal className="mx-auto max-w-2xl text-center">
             <SectionBadge icon={Sparkles}>Our Services</SectionBadge>
             <h2 className="mt-4 font-display text-3xl font-bold tracking-tight text-ink-950 sm:text-4xl">
-              Comprehensive cleaning{" "}
-              <span className="text-gradient">solutions</span>
+              From homes to businesses, we provide dependable, high-quality
+              cleaning services{" "}
+              <span className="text-gradient">tailored to your needs</span>
             </h2>
-            <p className="mt-4 text-base leading-7 text-slate-600">
-              From everyday tidying to deep, top-to-bottom resets — our teams
-              handle homes, offices, and everything in between.
-            </p>
           </Reveal>
 
           <div className="mt-14 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
