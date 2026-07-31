@@ -10,10 +10,6 @@ const slides = [
     alt: "Modern commercial office with desks and laptops",
   },
   {
-    src: "/images/hero/residential-home.jpg",
-    alt: "Beautifully maintained residential home",
-  },
-  {
     src: "/images/hero/commercial-interior.jpg",
     alt: "Clean, bright commercial office interior",
   },

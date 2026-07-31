@@ -19,7 +19,7 @@ const categoryIcons: Record<string, LucideIcon> = {
   "Commercial Cleaning": Building2,
   "Residential Cleaning": Home,
   "Deep Cleaning": Sparkles,
-  "Turnover Cleaning": RefreshCcw,
+  "Airbnb & Vacation Rental Turnovers": RefreshCcw,
   "Move In / Move Out": WashingMachine,
   "Post-Construction Cleaning": PaintBucket,
 };

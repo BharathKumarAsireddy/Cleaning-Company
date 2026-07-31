@@ -45,13 +45,6 @@ export default function PricingPage() {
           <div className="mt-14 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {services
               .filter((service) => service.pricing)
-              .sort((a, b) =>
-                a.slug === "deep-cleaning"
-                  ? 1
-                  : b.slug === "deep-cleaning"
-                    ? -1
-                    : 0
-              )
               .map((service, i) => (
                 <Reveal key={service.slug} delay={i * 0.08} className="h-full">
                   <Link
@@ -87,11 +80,16 @@ export default function PricingPage() {
         </div>
         <div className="relative mx-auto max-w-7xl px-6 lg:px-8">
           <Reveal className="mx-auto max-w-2xl text-center">
-            <SectionBadge icon={Tag}>Visit Plans</SectionBadge>
+            <SectionBadge icon={Tag}>Recurring Plans</SectionBadge>
             <h2 className="mt-4 font-display text-3xl font-bold tracking-tight text-ink-950 sm:text-4xl">
-              Or choose a{" "}
-              <span className="text-gradient">flat-rate plan</span>
+              Choose Your{" "}
+              <span className="text-gradient">Recurring Cleaning Plan</span>
             </h2>
+            <p className="mt-4 text-base leading-7 text-slate-600">
+              Choose the cleaning schedule that best fits your home and
+              lifestyle. Enjoy discounted pricing when you enroll in
+              recurring weekly, biweekly, or monthly cleaning services.
+            </p>
           </Reveal>
 
           <div className="mt-14 grid grid-cols-1 gap-8 lg:grid-cols-3">

@@ -45,7 +45,7 @@ export default function ContactPage() {
         icon={MessageCircle}
         title="Complete the form below for a"
         highlight="personalized cleaning quote"
-        description="Fill out the form below or reach us directly — we typically respond within one business day to confirm your service."
+        description="Fill out the form below to request your personalized cleaning quote. We'll typically respond within one business day."
         crumb="Contact"
       />
 

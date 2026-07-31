@@ -65,6 +65,24 @@ export type Service = {
 
 export const services: Service[] = [
   {
+    slug: "residential-cleaning",
+    title: "Residential Cleaning",
+    icon: Home,
+    image: "/images/services/residential-cleaning.jpg",
+    shortDescription:
+      "Recurring or one-time house cleaning tailored to your routine.",
+    description:
+      "Keep your home clean, fresh, and comfortable with reliable cleaning tailored to your schedule.",
+    features: [
+      "Kitchens & bathrooms",
+      "Dusting",
+      "Vacuuming in living areas & bedrooms",
+      "Trash removal",
+      "Light surface wiping",
+    ],
+    pricing: "Starting at $0.11 per sq. ft. Call to book a service.",
+  },
+  {
     slug: "commercial-cleaning",
     title: "Commercial Cleaning",
     icon: Building2,
@@ -84,45 +102,8 @@ export const services: Service[] = [
     pricing: "Starting at $0.08–$0.15 per sq. ft. Call to book a service.",
   },
   {
-    slug: "residential-cleaning",
-    title: "Residential Cleaning",
-    icon: Home,
-    image: "/images/services/residential-cleaning.jpg",
-    shortDescription:
-      "Recurring or one-time house cleaning tailored to your routine.",
-    description:
-      "Keep your home clean, fresh, and comfortable with reliable cleaning tailored to your schedule.",
-    features: [
-      "Kitchens & bathrooms",
-      "Dusting",
-      "Vacuuming in living areas & bedrooms",
-      "Trash removal",
-      "Light surface wiping",
-    ],
-    pricing: "Starting at $0.11 per sq. ft. Call to book a service.",
-  },
-  {
-    slug: "deep-cleaning",
-    title: "Deep Cleaning",
-    icon: Sparkles,
-    image: "/images/services/deep-cleaning.jpg",
-    shortDescription:
-      "For homes and businesses that need more than a routine clean.",
-    description:
-      "Designed for spaces that require additional cleaning beyond a standard service.",
-    features: [
-      "Detailed kitchen and bathroom cleaning",
-      "Baseboards, doors & trim",
-      "Dusting throughout",
-      "Vacuuming & mopping",
-      "Light switches & high-touch surfaces",
-      "Interior window sills & tracks",
-    ],
-    pricing: "Starting at $0.25 per sq. ft. Call to book a service.",
-  },
-  {
     slug: "turnover-cleaning",
-    title: "Turnover Cleaning",
+    title: "Airbnb & Vacation Rental Turnovers",
     icon: RefreshCcw,
     image: "/images/services/turnover-cleaning.jpg",
     shortDescription:
@@ -180,25 +161,6 @@ export const services: Service[] = [
       "Starting at $0.25 per sq. ft. — including condo & apartment cleaning. Call to book a service.",
   },
   {
-    slug: "post-construction",
-    title: "Post-Construction Cleaning",
-    icon: PaintBucket,
-    image: "/images/services/post-construction.jpg",
-    shortDescription:
-      "Dust and debris removal after renovations or new builds.",
-    description:
-      "Final cleaning for empty, newly built or renovated homes, offices, condos, & commercial spaces. The property must be construction-complete and free of contractor materials before our arrival.",
-    features: [
-      "Fine dust removal",
-      "Vacuuming & mopping",
-      "Cabinets, countertops & fixtures",
-      "Baseboards, doors & trim",
-      "Interior windows & sills",
-      "Final detail cleaning before occupancy",
-    ],
-    pricing: "Starting at $0.18–$0.25 per sq. ft. Call to book a service.",
-  },
-  {
     slug: "absentee-homeowner-services",
     title: "Absentee Homeowner Services",
     icon: Plane,
@@ -217,6 +179,44 @@ export const services: Service[] = [
       "Visual checks for any obvious concerns to report back to you",
     ],
   },
+  {
+    slug: "deep-cleaning",
+    title: "Deep Cleaning",
+    icon: Sparkles,
+    image: "/images/services/deep-cleaning.jpg",
+    shortDescription:
+      "For homes and businesses that need more than a routine clean.",
+    description:
+      "Designed for spaces that require additional cleaning beyond a standard service.",
+    features: [
+      "Detailed kitchen and bathroom cleaning",
+      "Baseboards, doors & trim",
+      "Dusting throughout",
+      "Vacuuming & mopping",
+      "Light switches & high-touch surfaces",
+      "Interior window sills & tracks",
+    ],
+    pricing: "Starting at $0.25 per sq. ft. Call to book a service.",
+  },
+  {
+    slug: "post-construction",
+    title: "Post-Construction Cleaning",
+    icon: PaintBucket,
+    image: "/images/services/post-construction.jpg",
+    shortDescription:
+      "Dust and debris removal after renovations or new builds.",
+    description:
+      "Final cleaning for empty, newly built or renovated homes, offices, condos, & commercial spaces. The property must be construction-complete and free of contractor materials before our arrival.",
+    features: [
+      "Fine dust removal",
+      "Vacuuming & mopping",
+      "Cabinets, countertops & fixtures",
+      "Baseboards, doors & trim",
+      "Interior windows & sills",
+      "Final detail cleaning before occupancy",
+    ],
+    pricing: "Starting at $0.18–$0.25 per sq. ft. Call to book a service.",
+  },
 ];
 
 export type PricingPlan = {
@@ -228,7 +228,7 @@ export type PricingPlan = {
 
 export const pricingPlans: PricingPlan[] = [
   {
-    name: "Essential",
+    name: "Weekly Cleaning",
     description: "A reliable standard clean for everyday upkeep.",
     features: [
       "Up to 2 bedrooms / 2 bathrooms",
@@ -239,11 +239,11 @@ export const pricingPlans: PricingPlan[] = [
     ],
   },
   {
-    name: "Signature",
+    name: "Biweekly Cleaning",
     description: "Our most popular plan for homes that need a deeper touch.",
     features: [
       "Up to 4 bedrooms / 3 bathrooms",
-      "Everything in Essential",
+      "Everything in Weekly Cleaning",
       "Inside microwave & appliance fronts",
       "Baseboards & door frame detailing",
       "Bed making & linen tidy-up",
@@ -252,7 +252,7 @@ export const pricingPlans: PricingPlan[] = [
     highlighted: true,
   },
   {
-    name: "Commercial",
+    name: "Monthly Cleaning",
     description: "Scalable cleaning programs for offices & facilities.",
     features: [
       "Flexible after-hours scheduling",
@@ -450,7 +450,7 @@ export const galleryItems: GalleryItem[] = [
   },
   {
     title: "Guest-Ready Rental Turnover",
-    category: "Turnover Cleaning",
+    category: "Airbnb & Vacation Rental Turnovers",
     beforeImage: "/images/gallery/turnover-cleaning-before.jpg",
     afterImage: "/images/gallery/turnover-cleaning-after.jpg",
   },
